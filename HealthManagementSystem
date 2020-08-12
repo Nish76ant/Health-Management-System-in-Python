@@ -1,0 +1,136 @@
+#Health Management System
+
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+
+time = str(getdate())
+print('Welcome to the Health Mangement System Developed by Kumar Nishant :\n\n')
+print('Who are you ?')
+print('1) Press 1 for Harry')
+print('2) Press 2 for Rohan')
+print('3) Press 3 for Hammad')
+name_user = int(input())
+
+def Harry():
+    print('Welcome Harry !!\n\n')
+    print('1) Press 1 for Excercise')
+    print('2) Press 2 for Food')
+    fitness = int(input)
+    print()
+    if fitness == 1:
+        print('What do you want to do ?')
+        print('Press 1 for lock the value')
+        print('Press 2 for retrive the old value')
+        lock_retrive = int(input())
+        if lock_retrive == 1:
+            print('Enter here :')
+            with open('Harry-Excercise.txt','a') as f:
+                new_value1 = input()
+                f.write("\n"+str(str[time]) +" "+new_value1)
+                print('Succesfully Written !!')
+        elif lock_retrive == 2:
+            with open('Harry-Excercise.txt','r') as f:
+                print(f.read())
+        else:
+            rint('Enter a valid input (Lock,Retrive)') 
+    elif fitness == 2:
+        print('What do you want to do ?')
+        print('Press 1 for the lock the value')
+        print('Press 2 for retrive the old value')
+        lock_retrive = int(input())
+        if lock_retrive == 1:
+            with open('Harry-Food.txt','a') as f:
+                new_value1 = input()
+                f.write("\n"+str(str[time])+" "+new_value1)
+                print('Succesfully Written !!')
+        elif lock_retrive == 2:
+            with open('Harry-Food.txt','r') as f:
+                print(f.read())
+        else:
+            print('Enter a valid input(Lock,Retrive)')    
+def Rohan():
+    print('Welcome Roahn \n\n')
+    print('Press 1 for Excercise')
+    print('Press 2 for Food')
+    fitness = int(input())
+    if fitness == 1:
+        print('Hii Rohan what want you do')
+        print('Press 1 for Lock the value')
+        print('Press 2 for retrive the value')
+        if lock_retrive == 1:
+            print('Enter Here')
+            new_value1 = input()
+            with open('Rohan-Excercise.txt','a') as f:
+                f.write('\n'+str(str[time])+" "+new_value1)
+                print('Sucessfully Written !')
+        elif lock_retrive == 2:
+            with open('Rohan-Excercise.txt','r') as f:
+                print(f.read())
+        else:
+            print('Enter a valid input(Lock,Retrive')
+    elif fitness == 2:
+        print('Hii Rohan what you want to do') 
+        print('Press 1 for lock the value')
+        print('press 2 for retrive the value')
+        lock_retrive = int(input())
+
+        if lock_retrive == 1:
+            print("enter here")
+            new_value1 = input()
+            with open('Rohan-Food.txt','a') as f:
+                f.write('\n'+str(str[time]+" "+new_value1))
+                print('Succesfully Written !!')
+        elif lock_retrive == 2:   
+            with open('Rohan-Food.txt','r') as f:
+                print(f,read()) 
+        else:
+            print('Enter a valid input(Lock,Retrive')
+
+def Hammad():
+    print("Welcome Hammad!!\n\n")
+    print("1) Enter 1 for exercise")
+    print("2) Enter 2 for food\n\n")
+    fitness = int(input())
+    print()
+    if fitness == 1:
+        print("What do you want to do?")
+        print("1) Press 1 to Lock a new value")
+        print("2) Press 2 to Retrieve a old value")
+        lock_retrieve = int(input())
+        if lock_retrieve == 1:
+            print("Enter here:")
+            with open("Hammad-Exercise.txt", "a") as f:
+                new_value1 = input()
+                f.write("\n" + str([str(time)]) + ": " + new_value1)
+            print("Successfully Written!!")
+        elif lock_retrieve == 2:
+            with open("Hammad-Exercise.txt") as f:
+                print(f.read())
+        else:
+            print("Please enter a valid input (Lock, Retrieve)")
+    elif fitness == 2:
+        print("What do you want to do?")
+        print("1) Press 1 to Lock a new value")
+        print("2) Press 2 to Retrieve a old value")
+        lock_retrieve = int(input())
+        if lock_retrieve == 1:
+            print("Enter here:")
+            with open("Hammad-Food.txt", "a") as f:
+                new_value1 = input()
+                f.write("\n" + str([str(time)]) + ": " + new_value1)
+            print("Successfully Written!!")
+        elif lock_retrieve == 2:
+            with open("Hammad-Food.txt") as f:
+                print(f.read())
+        else:
+            print("Please enter a valid input (Lock, Retrieve")
+
+if name_user == 1:
+    Harry()
+elif name_user == 2:
+    Rohan()
+elif name_user == 3:
+    Hammad()
+else:
+    print("Please enter valid value (Harry, Rohan, Hammad)")
